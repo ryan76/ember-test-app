@@ -1,0 +1,39 @@
+.navbar-brand {
+  span {
+    color: $logo-color-primary;
+  }
+}
+
+.jumbotron {
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
+
+  h1 {
+    font-size: $font-size-h1;
+    @include media-breakpoint-up(lg) {
+      font-size: $display4-size;
+    }
+  }
+}
+
+.content-main {
+  @include make-col();
+  top: 84px;
+
+  @media (min-width: 255px) {
+    top: 52px;
+  }
+  @include media-breakpoint-down(sm) {
+    @include make-col-span(12);
+  }
+  @include media-breakpoint-up(sm) {
+    @include make-col-span(12);
+  }
+}
+
+#components-section {
+  h2 {
+    text-align: center;
+  }
+}
