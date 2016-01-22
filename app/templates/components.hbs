@@ -2,13 +2,8 @@
     <section id="components-section" class="row">
         <h2>Components</h2>
 
-        {{#each model as |component|}}
-            <div class="component-container">
-              <h3>{{component.title}}</h3>
-              <p>Creator: {{component.creator}}</p>
-              <p>Type: {{component.type}}</p>
-            </div>
+        {{#each model as |componentListing|}}
+            {{component-listing component=componentListing}}
         {{/each}}
-
     </section>
 </div>
