@@ -1,0 +1,11 @@
+<div class="component-container">
+    <h3>{{component.title}}</h3>
+    <p>Creator: {{component.creator}}</p>
+    <p>Type: {{component.type}}</p>
+    {{#if isImageShowing}}
+        <p><img src={{component.image}} alt={{component.type}} width="500"></p>
+        <button {{action "imageHide"}}>Hide image</button>
+    {{else}}
+        <button {{action "imageShow"}}>Show image</button>
+    {{/if}}
+</div>
