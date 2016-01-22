@@ -2,11 +2,13 @@
     <section id="components-section" class="row">
         <h2>Components</h2>
 
-      {{#each model as |component|}}
-          <h3>{{component.title}}</h3>
-          <p>Creator: {{component.creator}}</p>
-          <p>Type: {{component.type}}</p>
-      {{/each}}
+        {{#each model as |component|}}
+            <div class="component-container">
+              <h3>{{component.title}}</h3>
+              <p>Creator: {{component.creator}}</p>
+              <p>Type: {{component.type}}</p>
+            </div>
+        {{/each}}
 
     </section>
 </div>

@@ -35,5 +35,18 @@
 #components-section {
   h2 {
     text-align: center;
+    @include rem(margin-top, 30px);
+    @include rem(margin-bottom, 50px);
+  }
+}
+
+.component-container {
+  @include make-col();
+
+  @include media-breakpoint-down(sm) {
+    @include make-col-span(12);
+  }
+  @include media-breakpoint-up(sm) {
+    @include make-col-span(4);
   }
 }
