@@ -53,4 +53,10 @@
   img {
     @include rem(padding-bottom, 10px);
   }
+
+  button {
+    @include media-breakpoint-down(sm) {
+      @include rem(margin-bottom, 40px);
+    }
+  }
 }
