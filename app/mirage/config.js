@@ -94,7 +94,7 @@ export default function() {
         type: 'components',
         id: 3,
         attributes: {
-          title: 'Component 3',
+          title: 'Modal',
           creator: 'Ryan Niemann',
           type: 'Modal',
           image: 'https://www.codementor.io/assets/topic/tutorial_guide/2x/ember-js_tutorial.png'
