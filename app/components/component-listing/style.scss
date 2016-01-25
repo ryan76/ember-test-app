@@ -1,0 +1,22 @@
+.component-listing {
+  .component-container {
+    @include make-col();
+
+    @include media-breakpoint-down(sm) {
+      @include make-col-span(12);
+    }
+    @include media-breakpoint-up(sm) {
+      @include make-col-span(4);
+    }
+
+    img {
+      @include rem(padding-bottom, 10px);
+    }
+
+    button {
+      @include media-breakpoint-down(sm) {
+        @include rem(margin-bottom, 40px);
+      }
+    }
+  }
+}
