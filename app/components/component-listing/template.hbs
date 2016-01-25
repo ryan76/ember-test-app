@@ -3,9 +3,9 @@
     <p>Creator: {{component.creator}}</p>
     <p>Type: {{component.type}}</p>
     {{#if isImageShowing}}
-        <p><img src={{component.image}} alt={{component.type}} width="500"></p>
-        <button {{action "imageHide"}}>Hide image</button>
+        <p><img src={{component.image}} alt={{component.type}} class="col-xs-12"></p>
+        <button {{action "imageHide"}} type="button" class="btn btn-secondary">Hide image</button>
     {{else}}
-        <button {{action "imageShow"}}>Show image</button>
+        <button {{action "imageShow"}} type="button" class="btn btn-secondary">Show image</button>
     {{/if}}
 </div>

@@ -49,4 +49,8 @@
   @include media-breakpoint-up(sm) {
     @include make-col-span(4);
   }
+
+  img {
+    @include rem(padding-bottom, 10px);
+  }
 }

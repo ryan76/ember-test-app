@@ -76,19 +76,19 @@ export default function() {
         type: 'components',
         id: 1,
         attributes: {
-          title: 'Component 1',
-          creator: 'Ryan Niemann',
-          type: 'Button',
-          image: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg'
+          title: 'Ember Guage Component',
+          creator: 'Julien Knebel',
+          type: 'Guage',
+          image: 'http://front-back.com/wp-content/uploads/2013/10/ember-gauge-component_21.png'
         }
       }, {
         type: 'components',
         id: 2,
         attributes: {
-          title: 'Component 2',
-          creator: 'Ryan Niemann',
-          type: 'Dropdown',
-          image: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Alfonso_13_Highrise_Tegucigalpa.jpg'
+          title: 'Dashboard Navigation',
+          creator: 'Gavin Joyce',
+          type: 'Navbar',
+          image: 'https://blog.intercom.io/wp-content/uploads/2014/05/Segments-Screen-Shot.png'
         }
       }, {
         type: 'components',
@@ -97,7 +97,7 @@ export default function() {
           title: 'Component 3',
           creator: 'Ryan Niemann',
           type: 'Modal',
-          image: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg'
+          image: 'https://www.codementor.io/assets/topic/tutorial_guide/2x/ember-js_tutorial.png'
         }
       }]
     };
