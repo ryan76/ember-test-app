@@ -23,5 +23,5 @@ export default Ember.Component.extend({
     '-webkit-transform: rotate('+angle+'deg); -2moz-transform: rotate('+angle+'deg); -ms-transform: rotate('+angle+'deg); transform: rotate('+angle+'deg);';
 
     return styles;
-  }.property('maxValue', 'currentValue')
+  }.property('value', 'maxValue')
 });
