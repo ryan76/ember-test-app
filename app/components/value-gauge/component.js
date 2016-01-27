@@ -16,8 +16,11 @@ export default Ember.Component.extend({
     var value    = parseInt(this.get('value'), 10);
     var maxValue = parseInt(this.get('maxValue'), 10);
 
-    var angle = Math.floor( 180 * value/maxValue - 90 );
-    var styles = 'transform: rotate('+angle+'deg)';
+    var percentValue = Math.floor( value/maxValue * 100 );
+    var angle = Math.floor(180 * percentValue/100 - 90);
+    var styles = ( this.get('isMaxValueExceeded') ) ?
+      '-webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg);' :
+    '-webkit-transform: rotate('+angle+'deg); -2moz-transform: rotate('+angle+'deg); -ms-transform: rotate('+angle+'deg); transform: rotate('+angle+'deg);';
 
     return styles;
   }.property('maxValue', 'currentValue')
