@@ -4,9 +4,6 @@
   @include rem(height, 50px);
   @include rem(border-radius, 50px 50px 0 0);
   background:$value-gauge-background-color;
-  -webkit-transition: background .3s;
-  -moz-transition: background .3s;
-  -ms-transition: background .3s;
   transition: background .3s;
   margin-left: auto;
   margin-right: auto;
@@ -26,20 +23,8 @@
     background: $value-gauge-pointer-background-color;
     @include rem(border-radius, 4px);
     box-shadow:1px 1px 3px rgba(0,0,0,.3);
-
-    -webkit-transition: -webkit-transform .3s ease 0s;
-    -moz-transition:    -moz-transform .3s ease 0s;
-    -ms-transition:     -ms-transform .3s ease 0s;
-    transition:         transform .3s ease 0s;
-
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
+    transition: transform .3s ease 0s;
     transform: rotate(-90deg);
-
-    -webkit-transform-origin: bottom;
-    -moz-transform-origin: bottom;
-    -ms-transform-origin: bottom;
     transform-origin: bottom;
 
     .pointer-cap {
