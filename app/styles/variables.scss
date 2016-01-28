@@ -1,4 +1,17 @@
-// Colors
+////////////
+// Colors //
+////////////
 
+$white: #ffffff;
+$red: rgb(255,0,0);
+
+// Brand colors
 $logo-color-primary: #dd6a58;
 $logo-color-secondary: #f2efe7;
+
+// Component colors
+$value-gauge-background-color: #41b7d8;
+$value-gauge-background-color-exceeded: $red;
+$value-gauge-value-exceeded-color: $red;
+$value-gauge-pointer-background-color: $white;
+$value-gauge-pointer-cap-background-color: $white;

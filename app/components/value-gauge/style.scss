@@ -2,8 +2,8 @@
   position:relative;
   @include rem(width, 100px);
   @include rem(height, 50px);
-  @include rem(border-radius, 50px 50px 0px 0px);
-  background:#41b7d8;
+  @include rem(border-radius, 50px 50px 0 0);
+  background:$value-gauge-background-color;
   -webkit-transition: background .3s;
   -moz-transition: background .3s;
   -ms-transition: background .3s;
@@ -23,7 +23,7 @@
     z-index:1;
     bottom:0;
     left:50%;
-    background:white;
+    background: $value-gauge-pointer-background-color;
     @include rem(border-radius, 4px);
     box-shadow:1px 1px 3px rgba(0,0,0,.3);
 
@@ -50,7 +50,7 @@
       position:absolute;
       bottom:0;
       left:50%;
-      background:white;
+      background: $value-gauge-pointer-cap-background-color;
       border-radius:100%;
       box-shadow:1px 1px 5px rgba(0,0,0,.3);
     }
@@ -79,7 +79,7 @@
 }
 
 .value-gauge.exceeded {
-  background:red;
+  background: $value-gauge-background-color-exceeded;
   .value {
     color:red;
   }
@@ -90,6 +90,6 @@
   position:absolute;
   @include rem(top, 60px);
   @include rem(font-size, 11px);
-  color:red;
+  color: $value-gauge-value-exceeded-color;
   text-align:center;
 }

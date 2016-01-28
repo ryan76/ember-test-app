@@ -31,17 +31,22 @@
     }
 
     @else {
-      $unit: unit($value);
-      $val: parseInt($value);
-
-      @if $unit == "px" {
-        $px : append($px,  $value);
-        $rem: append($rem, ($val / 10 + rem));
+      @if unitless($value) {
+        @warn "$value may not be unitless, was #{$value}.";
       }
+      @else {
+        $unit: unit($value);
+        $val: parseInt($value);
 
-      @if $unit == "rem" {
-        $px : append($px,  ($val * 10 + px));
-        $rem: append($rem, $value);
+        @if $unit == "px" {
+          $px : append($px,  $value);
+          $rem: append($rem, ($val / 10 + rem));
+        }
+
+        @if $unit == "rem" {
+          $px : append($px,  ($val * 10 + px));
+          $rem: append($rem, $value);
+        }
       }
     }
   }
