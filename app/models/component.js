@@ -4,5 +4,6 @@ export default DS.Model.extend({
   title: DS.attr(),
   creator: DS.attr(),
   type: DS.attr(),
-  image: DS.attr()
+  image: DS.attr(),
+  isValueGauge: DS.attr()
 });

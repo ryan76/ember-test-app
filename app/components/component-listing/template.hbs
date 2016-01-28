@@ -9,18 +9,20 @@
         <button {{action "imageShow"}} type="button" class="btn btn-secondary">Show image</button>
     {{/if}}
 
-    <div class="gauge-container">
-      <div class="form">
-          <div class="ui input">
-              <label>value</label>
-            {{input type="text" value=something1}}
-          </div>
+    {{#if (eq component.title 'Ember Guage Component')}}
+        <div class="gauge-container">
+            <div class="form">
+                <div class="ui input">
+                    <label>value</label>
+                  {{input type="text" value=something1}}
+                </div>
 
-          <div class="ui input">
-              <label>maxValue</label>
-            {{input type="text" value=something2}}
-          </div>
-      </div>
-      {{value-gauge value=something1 maxValue=something2}}
-    </div>
+                <div class="ui input">
+                    <label>maxValue</label>
+                  {{input type="text" value=something2}}
+                </div>
+            </div>
+          {{value-gauge value=something1 maxValue=something2}}
+        </div>
+    {{/if}}
 </div>
