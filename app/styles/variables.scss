@@ -4,6 +4,7 @@
 
 $white: #ffffff;
 $red: rgb(255,0,0);
+$value-exceeded-color: #C33535;
 
 // Brand colors
 $logo-color-primary: #dd6a58;
@@ -13,7 +14,7 @@ $logo-color-secondary: #f2efe7;
 $gauge-container-background-color: #f1f1f1;
 
 $value-gauge-background-color: #41b7d8;
-$value-gauge-background-color-exceeded: $red;
-$value-gauge-value-exceeded-color: $red;
-$value-gauge-pointer-background-color: $white;
-$value-gauge-pointer-cap-background-color: $white;
+$value-gauge-background-color-exceeded: $value-exceeded-color;
+$value-gauge-value-exceeded-color: $value-exceeded-color;
+$value-gauge-pointer-background-color: darken($value-gauge-background-color, 35%);
+$value-gauge-pointer-cap-background-color: darken($value-gauge-background-color, 35%);

@@ -66,7 +66,7 @@
 .value-gauge.exceeded {
   background: $value-gauge-background-color-exceeded;
   .value {
-    color:red;
+    color: $value-gauge-value-exceeded-color;
   }
 }
 
