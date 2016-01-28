@@ -25,7 +25,18 @@
           {{value-gauge value=something1 maxValue=something2}}
         </div>
     {{else if (eq component.title 'Progress Bar')}}
-      {{progress-bar value='50' maxValue='100'}}
+      <div class="form">
+          <div class="ui input">
+              <label>Progress Value</label>
+            {{input type="text" value=progressValue}}
+          </div>
+
+          <div class="ui input">
+              <label>Max Progress Value</label>
+            {{input type="text" value=progressMaxValue}}
+          </div>
+      </div>
+      {{progress-bar value=progressValue maxValue=progressMaxValue}}
     {{else if (eq component.title 'Accordion')}}
       {{accordion-block}}
     {{/if}}
