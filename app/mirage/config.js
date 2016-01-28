@@ -85,19 +85,19 @@ export default function() {
         type: 'components',
         id: 2,
         attributes: {
-          title: 'Dashboard Navigation',
-          creator: 'Gavin Joyce',
-          type: 'Navbar',
-          image: 'https://blog.intercom.io/wp-content/uploads/2014/05/Segments-Screen-Shot.png'
+          title: 'Progress Bar',
+          creator: 'Ryan Niemann',
+          type: 'Progress Bar',
+          image: 'assets/images/progress_bar.png'
         }
       }, {
         type: 'components',
         id: 3,
         attributes: {
-          title: 'Modal',
+          title: 'Accordion',
           creator: 'Ryan Niemann',
-          type: 'Modal',
-          image: 'https://www.codementor.io/assets/topic/tutorial_guide/2x/ember-js_tutorial.png'
+          type: 'Accordion',
+          image: 'assets/images/accordion.png'
         }
       }]
     };
