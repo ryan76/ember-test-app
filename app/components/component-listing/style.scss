@@ -18,7 +18,7 @@
     }
 
     .gauge-container {
-      background: #f1f1f1;
+      background: $gauge-container-background-color;
       @include rem(border-radius, 5px);
       @include rem(margin-bottom, 40px);
       @include rem(padding, 15px 15px 30px 15px);
