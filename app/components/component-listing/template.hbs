@@ -24,5 +24,9 @@
             </div>
           {{value-gauge value=something1 maxValue=something2}}
         </div>
+    {{else if (eq component.title 'Dashboard Navigation')}}
+      <p> Dashboard Navigation Component </p>
+    {{else if (eq component.title 'Modal')}}
+        <p> Modal Component </p>
     {{/if}}
 </div>
