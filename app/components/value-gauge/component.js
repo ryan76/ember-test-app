@@ -15,13 +15,11 @@ export default Ember.Component.extend({
     // parseInt because we want ensure input values are Numbers or String representation of numbers
     var value    = parseInt(this.get('value'), 10);
     var maxValue = parseInt(this.get('maxValue'), 10);
-
     var percentValue = Math.floor( value/maxValue * 100 );
     var angle = Math.floor(180 * percentValue/100 - 90);
-    var styles = ( this.get('isMaxValueExceeded') ) ?
-      '-webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg);' :
-    '-webkit-transform: rotate('+angle+'deg); -2moz-transform: rotate('+angle+'deg); -ms-transform: rotate('+angle+'deg); transform: rotate('+angle+'deg);';
-
-    return styles;
+    var maxExceededStyle = '-webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg);';
+    var notExceededStyle = '-webkit-transform: rotate('+angle+'deg); -2moz-transform: rotate('+angle+'deg); -ms-transform: rotate('+angle+'deg); transform: rotate('+angle+'deg);';
+    var styles = ( this.get('isMaxValueExceeded') ) ? maxExceededStyle : notExceededStyle;
+    return new Ember.Handlebars.SafeString(styles);
   }.property('value', 'maxValue')
 });
