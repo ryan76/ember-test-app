@@ -3,13 +3,15 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   classNames: ['value-gauge'],
   classNameBindings: ['isMaxValueExceeded:exceeded'],
+  value: null,
+  maxValue: null,
 
-  isMaxValueExceeded: function(){
+  isMaxValueExceeded: Ember.computed('value', 'maxValue', function() {
     // parseInt because we want ensure input values are Numbers or String representation of numbers
     var value    = parseInt(this.get('value'), 10);
     var maxValue = parseInt(this.get('maxValue'), 10);
     return (value > maxValue); // return a Boolean
-  }.property('value', 'maxValue'),
+  }),
 
   computedAngle: function(){
     // parseInt because we want ensure input values are Numbers or String representation of numbers
