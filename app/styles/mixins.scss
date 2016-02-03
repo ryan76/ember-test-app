@@ -4,47 +4,45 @@
 }
 
 // Converts px to rem
-@function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return #{$remSize}rem;
+@function calculate-rem($size) {
+  $rem-size: $size / 16px;
+  @return #{$rem-size}rem;
 }
 
-@function parseInt($n) {
+@function parse-int($n) {
   @return $n / ($n * 0 + 1);
 }
 
 // Accepts px or rem values and produces property in rem with px fallback
 // Usage: @include rem(padding, 20px 10px);
 // You must include the correct units for values
-// Doesn’t work with all properties (border shorthand among others): use calculateRem for those
+// Doesn’t work with all properties (border shorthand among others): use calculate-rem for those
 // To use rem, the html font-size must be set to 62.5%
 // See: http://hugogiraudel.com/2013/03/18/ultimate-rem-mixin/
 @mixin rem($property, $values) {
-  $px : ();
+  $px: ();
   $rem: ();
 
   @each $value in $values {
 
     @if $value == 0 or $value == auto {
-      $px : append($px , $value);
+      $px: append($px , $value);
       $rem: append($rem, $value);
-    }
-
-    @else {
+    } @else {
       @if unitless($value) {
-        @warn "$value may not be unitless, was #{$value}.";
+        @warn '$value may not be unitless, was #{$value}.';
       } @else {
         $unit: unit($value);
-        $val: parseInt($value);
+        $val: parse-int($value);
 
-        @if $unit == "px" {
-          $px : append($px,  $value);
+        @if $unit == 'px' {
+          $px: append($px, $value);
           $rem: append($rem, ($val / 10 + rem));
-        } @else if $unit == "rem" {
-          $px : append($px,  ($val * 10 + px));
+        } @else if $unit == 'rem' {
+          $px: append($px, ($val * 10 + px));
           $rem: append($rem, $value);
         } @else {
-          @warn "Units of $value must be either px or rem, was #{$unit}.";
+          @warn 'Units of $value must be either px or rem, was #{$unit}.';
         }
       }
     }
