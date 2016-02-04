@@ -1,16 +1,18 @@
 <div class="search-container">
     <div class="form">
-        <div class="ui input">
-            <label>Find</label>
-          {{input type="text" value=textToFind}}
-        </div>
-        <button {{action "findText"}} type="button" class="btn btn-primary-outline">Find Word</button>
+        <div class="input-container">
+            <div class="ui input">
+                <label>Find</label>
+              {{input type="text" value=textToFind}}
+            </div>
+            <button {{action "findText"}} type="button" class="btn btn-primary btn-sm">Find Word</button>
 
-        <div class="ui input">
-            <label>Replace</label>
-          {{input type="text" value=textToReplace}}
+            <div class="ui input">
+                <label>Replace</label>
+              {{input type="text" value=textToReplace}}
+            </div>
+            <button {{action "replaceText"}} type="button" class="btn btn-primary btn-sm">Replace Word</button>
         </div>
-        <button {{action "replaceText"}} type="button" class="btn btn-primary-outline">Replace Word</button>
     </div>
     <p>
         Far quitting dwelling graceful the likewise received building. An fact so to that show am shed sold cold. Unaffected
