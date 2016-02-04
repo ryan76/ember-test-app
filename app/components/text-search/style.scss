@@ -1,7 +1,15 @@
 .text-search {
-  .component-container {
-    button {
-      @include rem(margin-bottom, 0);
+  .search-container {
+    @include rem(margin-top, 50px);
+
+    .form {
+      @include rem(margin-bottom, 40px);
+
+      .ui.input {
+        @include rem(width, 250px);
+
+        display: inline-block;
+      }
     }
   }
 }
