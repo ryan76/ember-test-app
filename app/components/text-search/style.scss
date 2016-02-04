@@ -1,0 +1,7 @@
+.text-search {
+  .component-container {
+    button {
+      @include rem(margin-bottom, 0);
+    }
+  }
+}
