@@ -1,0 +1,14 @@
+<div class="form">
+    <div class="ui input">
+        <label>Find</label>
+      {{input type="text" value=textToFind}}
+    </div>
+    <button {{action "findText"}} type="button" class="btn btn-secondary">Find Text</button>
+
+    <div class="ui input">
+        <label>Replace</label>
+      {{input type="text" value=textToReplace}}
+    </div>
+    <button {{action "replaceText"}} type="button" class="btn btn-secondary">Replace Text</button>
+</div>
+This is some text to search for words. Enter a word to search for and a word to replace that word with.

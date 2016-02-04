@@ -12,7 +12,8 @@
     "tether": "~1.1.1",
     "pretender": "~0.10.1",
     "lodash": "~3.7.0",
-    "Faker": "~3.0.0"
+    "Faker": "~3.0.0",
+    "blast-text": "~2.0.0"
   },
   "resolutions": {
     "ember": "2.2.0"
