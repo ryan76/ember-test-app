@@ -28,6 +28,7 @@ module.exports = function(defaults) {
   // along with the exports of each module as its value.
 
   app.import('bower_components/blast-text/jquery.blast.js');
+  app.import('vendor/TweenMax.js');
 
   return app.toTree();
 };
