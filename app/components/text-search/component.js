@@ -7,8 +7,8 @@ export default Ember.Component.extend({
 
   actions: {
     findText() {
-      $('.text-search .component-container p').blast({delimiter: "word", generateValueClass: true});
       var createdClass = '.blast-word-' + this.textToFind;
+      $('.text-search .component-container p').blast({delimiter: "word", generateValueClass: true});
       $(createdClass).css('color', 'red');
     },
 
