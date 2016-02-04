@@ -9,13 +9,13 @@ export default Ember.Component.extend({
     findText() {
       var createdClass = '.blast-word-' + this.textToFind;
       $('.text-search .component-container p').blast({delimiter: "word", generateValueClass: true});
-      $(createdClass).css('color', 'red');
+      $(createdClass).css('background-color', 'rgba(255, 255, 0, 0.5)');
     },
 
     replaceText() {
       var createdClass = '.blast-word-' + this.textToFind;
       $(createdClass).text(this.textToReplace);
-      $(createdClass).css('color', 'green');
+      $('.text-search .component-container p').blast(false);
     }
   }
 });
