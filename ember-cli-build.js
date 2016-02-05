@@ -29,6 +29,7 @@ module.exports = function(defaults) {
 
   app.import('bower_components/blast-text/jquery.blast.js');
   app.import('vendor/TweenMax.js');
+  app.import('bower_components/Snap.svg/dist/snap.svg.js');
 
   return app.toTree();
 };
