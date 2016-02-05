@@ -1,0 +1,67 @@
+.percentage-indicator {
+  @import url(http://fonts.googleapis.com/css?family=Share+Tech);
+  body {
+    background: #efefef;
+  }
+
+  .percentage-container {
+    width: 400px;
+    height: 200px;
+    position: relative;
+    margin: 50px auto 0 auto;
+    font-family: 'Share Tech', sans-serif;
+    color: #444;
+  }
+
+  #percent, #svg {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #percent {
+    line-height: 20px;
+    height: 20px;
+    width: 200px;
+    top: 90px;
+    font-size: 43px;
+    text-align: center;
+    color: #3da08d;
+    opacity: 0.8
+  }
+
+  p, .my-btn {
+    position: relative;
+    left: 220px;
+    width: 200px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 24px;
+    top: 30px;
+  }
+
+  .my-btn {
+    text-align: center;
+    background: #5fc2af;
+    color: #fff;
+    width: 120px;
+    height: 37px;
+    line-height: 37px;
+    cursor: pointer;
+  }
+
+  input {
+    border: 1px solid #E6E4E4;
+    border-radius: 4px;
+    outline: 0;
+    width: 30px;
+    font-family: helvetica;
+    font-size: 24px;
+    text-transform: capitalize;
+    font-family: 'Share Tech', sans-serif;
+    background: transparent;
+    padding-left: 3px;
+  }
+}

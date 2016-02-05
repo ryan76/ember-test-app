@@ -1,0 +1,9 @@
+<div class="percentage-container">
+    <div id="percent"></div>
+    <svg id="svg"></svg>
+    <p>
+        <label for="perc-input">Percent:</label>
+        {{input id="input" type="text" maxlength="2" value=percentValue}}
+    </p>
+    <a class="my-btn" id="run" {{action "run"}}>Run</a>
+</div>
