@@ -12,6 +12,12 @@
               {{input type="text" value=textToReplace}}
             </div>
             <button {{action "replaceText"}} type="button" class="btn btn-primary btn-sm">Replace Word</button>
+
+            <div class="ui input">
+                <label>Style</label>
+              {{input type="text" value=styleCommand}}
+            </div>
+            <button {{action "styleText"}} type="button" class="btn btn-primary btn-sm">Style Word</button>
         </div>
     </div>
     <p>
