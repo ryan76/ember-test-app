@@ -49,6 +49,16 @@ export default Ember.Component.extend({
       } else {
         $(createdClass).css('text-decoration', 'underline');
       }
+    },
+
+    toggleEditMode() {
+      var editor = $('.editor');
+      var isEditable = editor.attr('contentEditable');
+      if (isEditable === 'true') {
+        editor.attr('contentEditable', 'false');
+      } else {
+        editor.attr('contentEditable', 'true');
+      }
     }
   }
 });
