@@ -52,13 +52,25 @@ export default Ember.Component.extend({
     },
 
     toggleEditMode() {
-      var editor = $('.editor');
+      var editor = $('.wysiwyg-editor');
       var isEditable = editor.attr('contentEditable');
       if (isEditable === 'true') {
         editor.attr('contentEditable', 'false');
       } else {
         editor.attr('contentEditable', 'true');
       }
+    },
+
+    boldTextEditor() {
+      document.execCommand('bold', null, null);
+    },
+
+    italicizeTextEditor() {
+      document.execCommand('italic', null, null);
+    },
+
+    underlineTextEditor() {
+      document.execCommand('underline', null, null);
     }
   }
 });
