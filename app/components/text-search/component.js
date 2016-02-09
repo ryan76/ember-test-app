@@ -4,7 +4,6 @@ export default Ember.Component.extend({
   classNames: ["text-search"],
   textToFind: null,
   textToReplace: null,
-  styleCommand: null,
 
   actions: {
     findText() {
@@ -19,25 +18,37 @@ export default Ember.Component.extend({
       $('.text-search .search-container p').blast(false);
     },
 
-    styleText() {
-      var commands = {
-        'bold': {
-          'style': 'font-weight',
-          'value': 'bold'
-        },
-        'italic': {
-          'style': 'font-style',
-          'value': 'italic'
-        },
-        'underline': {
-          'style': 'text-decoration',
-          'value': 'underline'
-        }
-      };
-      var cmd = this.styleCommand;
+    boldText() {
       var createdClass = '.blast-word-' + this.textToFind;
       $(createdClass).css('background-color', 'white');
-      $(createdClass).css(commands[cmd].style, commands[cmd].value);
+      var currentStyle = $(createdClass).css('font-weight');
+      if (currentStyle === 'bold') {
+        $(createdClass).css('font-weight', 'normal');
+      } else {
+        $(createdClass).css('font-weight', 'bold');
+      }
+    },
+
+    italicizeText() {
+      var createdClass = '.blast-word-' + this.textToFind;
+      $(createdClass).css('background-color', 'white');
+      var currentStyle = $(createdClass).css('font-style');
+      if (currentStyle === 'italic') {
+        $(createdClass).css('font-style', 'normal');
+      } else {
+        $(createdClass).css('font-style', 'italic');
+      }
+    },
+
+    underlineText() {
+      var createdClass = '.blast-word-' + this.textToFind;
+      $(createdClass).css('background-color', 'white');
+      var currentStyle = $(createdClass).css('text-decoration');
+      if (currentStyle === 'underline') {
+        $(createdClass).css('text-decoration', 'none');
+      } else {
+        $(createdClass).css('text-decoration', 'underline');
+      }
     }
   }
 });

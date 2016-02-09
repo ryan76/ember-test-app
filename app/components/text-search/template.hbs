@@ -5,19 +5,17 @@
                 <label>Find</label>
               {{input type="text" value=textToFind}}
             </div>
-            <button {{action "findText"}} type="button" class="btn btn-primary btn-sm">Find Word</button>
+            <button {{action "findText"}} type="button" class="btn btn-primary btn-sm">Find</button>
 
             <div class="ui input">
                 <label>Replace</label>
               {{input type="text" value=textToReplace}}
             </div>
-            <button {{action "replaceText"}} type="button" class="btn btn-primary btn-sm">Replace Word</button>
+            <button {{action "replaceText"}} type="button" class="btn btn-primary btn-sm">Replace</button>
 
-            <div class="ui input">
-                <label>Style</label>
-              {{input type="text" value=styleCommand}}
-            </div>
-            <button {{action "styleText"}} type="button" class="btn btn-primary btn-sm">Style Word</button>
+            <button {{action "boldText"}} type="button" class="btn btn-secondary btn-sm">Bold</button>
+            <button {{action "italicizeText"}} type="button" class="btn btn-secondary btn-sm">Italic</button>
+            <button {{action "underlineText"}} type="button" class="btn btn-secondary btn-sm">Underline</button>
         </div>
     </div>
     <p>
